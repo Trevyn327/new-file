@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 20% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 20% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 20% 18%;
+    --primary: 24 95% 53%;            /* orange-500 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 214 32% 95%;
+    --secondary-foreground: 222 47% 20%;
+    --muted: 214 32% 95%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 214 90% 40%;            /* blue accent */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 20% 90%;
+    --input: 214 20% 88%;
+    --ring: 24 95% 53%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
+
+/* Blue brand gradient used on login hero + sidebar header */
+.brand-gradient {
+  background: linear-gradient(160deg, #1e3a8a 0%, #1d4ed8 55%, #2563eb 100%);
+}
+
+.num-tabular { font-variant-numeric: tabular-nums; }
+
+/* subtle scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
